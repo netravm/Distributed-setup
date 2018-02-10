@@ -1,5 +1,5 @@
-random:
-  - C:\Users\Yajana\Downloads\BlazemeterJMXFiles
+#random:
+ # - C:\Users\Yajana\Downloads\BlazemeterJMXFiles
 
 scripts:
     #Name of the JMX files which needs to be executed
