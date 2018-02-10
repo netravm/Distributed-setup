@@ -64,7 +64,7 @@ def jmeter_exection(iteration, rampup, concurrency, filepath):
 
 
 def read_n_write_ip():
-    with open(jmeterPath+"\ipconfig.txt", 'r') as stream:
+    with open(jmeterPath+"/ipconfig.txt", 'r') as stream:
         try:
             content = yaml.load(stream)
             print(content)
