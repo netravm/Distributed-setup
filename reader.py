@@ -10,9 +10,9 @@ import platform
 
 ips = []
 global jmeterPath
-chrome_script_path = '/scripts/chrome'
+chrome_script_path = '/scripts/Chrome'
 chrome_fullpath = os.path.dirname(os.path.realpath(__file__))+chrome_script_path
-firefox_script_path = '/scripts/firefox'
+firefox_script_path = '/scripts/Firefox'
 firefox_fullpath = os.path.dirname(os.path.realpath(__file__))+firefox_script_path
 global reportPath
 
