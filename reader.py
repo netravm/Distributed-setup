@@ -140,7 +140,7 @@ with open("Input/Input.yaml", 'r') as stream:
             lst = os.listdir(path)
             randomArray = random.sample(range(0, len(lst) - 1), len(lst) - 1)
             for no in randomArray:
-                filepath = path + "\\" + lst[no]
+                filepath = path + "/" + lst[no]
                 print(filepath,iteration,rampup,concurrency,iteration,rampup,concurrency)
                 jmeter_exection(iteration,rampup,concurrency,filepath)
 
@@ -160,7 +160,7 @@ with open("Input/Input.yaml", 'r') as stream:
                     print(filedir)
                     lst = os.listdir(filedir)
                     if script in lst:
-                        filepath = filedir+"\\"+script
+                        filepath = filedir+"/"+script
                         print(filepath)
                         cache=content['cache'][0]
                         if not cache:
