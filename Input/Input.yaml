@@ -3,7 +3,7 @@
 
 scripts:
     #Name of the JMX files which needs to be executed
-  - SanityLoginF.jmx
+  - SanityLogin.jmx
 
 url:
     #URL of the Application under test
