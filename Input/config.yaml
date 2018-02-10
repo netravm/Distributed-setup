@@ -6,7 +6,7 @@ windows-jmeterPath:
     - C:\Users\Yajana\PycharmProjects\Connector\apache-jmeter-3.3\bin
 
 ubuntu-jmeterPath:
-  - /home/ubuntu/apache-jmeter/bin
+  - /home/ubuntu/apache-jmeter-3.3/bin
 
 scripts:
   - chrome: \Scripts\Chrome
