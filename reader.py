@@ -73,7 +73,7 @@ def read_n_write_ip():
             print(exc)
 
     text = "remote_hosts="
-    x = fileinput.input(files=jmeterPath+"\jmeter.properties",inplace=1)
+    x = fileinput.input(files=jmeterPath+"/jmeter.properties",inplace=1)
     for line in x:
         if text in line:
             line = "remote_hosts="+content+"\n"
