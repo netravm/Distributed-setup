@@ -57,7 +57,7 @@ with open("Input/config.yaml", 'r') as stream:
 
 def jmeter_exection(iteration, rampup, concurrency, filepath):
     os.chdir(jmeterPath)
-    os.system("jmeter.bat -n -t"+ filepath+" -r -Gusers="+str(concurrency)+" -GrampUp="+str(rampup)+" -Gcount="+str(iteration)+" -Gduration="+str(timeout)+" -Gurl="+str(url))
+    os.system("./jmeter.sh -n -t"+ filepath+" -r -Gusers="+str(concurrency)+" -GrampUp="+str(rampup)+" -Gcount="+str(iteration)+" -Gduration="+str(timeout)+" -Gurl="+str(url))
     print("executed")
 
 
