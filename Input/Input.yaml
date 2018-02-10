@@ -1,1 +1,39 @@
+random:
+  - C:\Users\Yajana\Downloads\BlazemeterJMXFiles
+
+scripts:
+    #Name of the JMX files which needs to be executed
+  - SanityLoginF.jmx
+
+url:
+    #URL of the Application under test
+  - https://app.mammoth.io/#/login
+
+browsers:
+    #Browser of execution
+  - chrome
+
+cache:
+  - false
+
+instance:
+    #Number of Systems/Instances on which the execution should take place
+  - 5
+
+execution:
+    #Default value is 1 1 1 respectively
+  - concurrency: 3
+  - ramp-up: 0
+  - iteration: 2
+
+
+time-out:
+    #Maximum Duration of the jmeter test execution in minutes after which the execution terminates
+  - 5m
+
+ami:
+    #Image details and region
+  - image-id: ami-6d0b3e08
+  - security-group-id: sg-0c59ab67
+
 
