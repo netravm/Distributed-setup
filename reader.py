@@ -35,9 +35,9 @@ with open("Input/config.yaml", 'r') as stream:
         print(content)
         urlList = content['gitUrl']
         url = urlList[0]
-        print(url)
+        #print(url)
         osname = platform.system()
-        print(osname)
+        #print(osname)
         if osname == "Windows":
             jmeterVar = content['windows-jmeterPath']
             print(jmeterVar)
@@ -46,7 +46,7 @@ with open("Input/config.yaml", 'r') as stream:
             jmeterVar = content['ubuntu-jmeterPath']
             print(jmeterVar)
         jmeterPath = jmeterVar[0]
-        print(jmeterPath)
+        #print(jmeterPath)
 
 
 
@@ -67,17 +67,17 @@ def read_n_write_ip():
     with open(jmeterPath+"/ipconfig.txt", 'r') as stream:
         try:
             content = yaml.load(stream)
-            print(content)
+            #print(content)
 
         except yaml.YAMLError as exc:
-            print(exc)
+            #print(exc)
 
     text = "remote_hosts="
     x = fileinput.input(files=jmeterPath+"/jmeter.properties",inplace=1)
     for line in x:
         if text in line:
             line = "remote_hosts="+content+"\n"
-        print (line)
+        #print (line)
     x.close()
 
 
@@ -118,7 +118,7 @@ with open("Input/Input.yaml", 'r') as stream:
                         rampup = rampup.replace("s","")
                         rampup = int(rampup)
 
-            print(concurrency,iteration,rampup)
+            #print(concurrency,iteration,rampup)
 
 
         if "time-out" in content:
@@ -157,18 +157,18 @@ with open("Input/Input.yaml", 'r') as stream:
                 scripts = content['scripts']
                 for script in scripts:
                     filedir = path
-                    print(filedir)
+                    #print(filedir)
                     lst = os.listdir(filedir)
                     if script in lst:
                         filepath = filedir+"/"+script
-                        print(filepath)
+                        #print(filepath)
                         cache=content['cache'][0]
                         if not cache:
-                            print(cache)
+                            #print(cache)
                             replaceAll(filepath, '<boolProp name="WebDriverConfig.reset_per_iteration">false</boolProp>', '<boolProp name="WebDriverConfig.reset_per_iteration">true</boolProp>')
 
                         else:
-                            print(cache)
+                            #print(cache)
                             replaceAll(filepath,'<boolProp name="WebDriverConfig.reset_per_iteration">true</boolProp>', '<boolProp name="WebDriverConfig.reset_per_iteration">false</boolProp>')
 
                         print(script,browser,iteration,rampup,concurrency,iteration,rampup,concurrency)
