@@ -40,11 +40,11 @@ with open("Input/config.yaml", 'r') as stream:
         #print(osname)
         if osname == "Windows":
             jmeterVar = content['windows-jmeterPath']
-            print(jmeterVar)
+            #print(jmeterVar)
 
         else:
             jmeterVar = content['ubuntu-jmeterPath']
-            print(jmeterVar)
+            #print(jmeterVar)
         jmeterPath = jmeterVar[0]
         #print(jmeterPath)
 
