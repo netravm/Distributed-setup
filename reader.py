@@ -77,7 +77,7 @@ def read_n_write_ip():
     for line in x:
         if text in line:
             line = "remote_hosts="+content+"\n"
-        #print (line)
+        print (line)
     x.close()
 
 
